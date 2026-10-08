@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ghar Ka Khana | Homemade Pakistani Food in Gloucester</title>
+<meta name="description" content="Fresh, healthy and affordable homemade Pakistani meals in Gloucester. Biryani, pulao, curries and desserts from £3. Student friendly. Order on Instagram.">
+<meta name="color-scheme" content="light dark">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/light/style.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="loader" id="loader" aria-hidden="true">
+  <p class="loader-word"><span>Ghar Ka</span> <span>Khana</span></p>
+  <div class="loader-bar"><span id="loaderBar"></span></div>
+</div>
+
+<!-- Floating glass pill nav -->
+<header class="nav" id="nav">
+  <a href="#top" class="brand" aria-label="Ghar Ka Khana home">Ghar Ka <span>Khana</span></a>
+  <nav class="links" aria-label="Main">
+    <a href="#menu">Menu</a>
+    <a href="#gallery">Kitchen</a>
+    <a href="#about">Our story</a>
+    <a href="#how">How it works</a>
+  </nav>
+  <a href="#order" class="btn btn-small nav-cta">Order on Instagram <span class="btn-ic"><i class="ph-light ph-arrow-up-right"></i></span></a>
+  <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="overlay"><span></span><span></span></button>
+</header>
+
+<div class="overlay" id="overlay" aria-hidden="true" inert>
+  <nav class="overlay-links" aria-label="Mobile">
+    <a href="#menu" style="--i:0"><span>Menu</span></a>
+    <a href="#gallery" style="--i:1"><span>Kitchen</span></a>
+    <a href="#about" style="--i:2"><span>Our story</span></a>
+    <a href="#how" style="--i:3"><span>How it works</span></a>
+    <a href="#order" class="btn" style="--i:4"><span class="ov-btn">Order on Instagram <span class="btn-ic"><i class="ph-light ph-arrow-up-right"></i></span></span></a>
+  </nav>
+</div>
+
+<main id="top">
+
+<!-- HERO: cinematic video stage inside a double bezel -->
+<section class="hero">
+  <div class="hero-full" id="heroMedia">
+    <div class="hero-stage" id="heroStage">
+      <div class="hero-videos" aria-hidden="true">
+        <video class="hv" muted playsinline autoplay loop preload="auto" disablepictureinpicture tabindex="-1" poster="images/hero-poster.jpg">
+          <source src="video/hero.mp4" type="video/mp4">
+        </video>
+        <video class="hv" muted playsinline preload="none" disablepictureinpicture tabindex="-1"></video>
+      </div>
+      <div class="hero-scrim" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <h1 class="split">Homemade Pakistani food, made fresh for you.</h1>
+        <p class="lede reveal-fade">Fresh, healthy and affordable meals from our Gloucester kitchen, from £3. Message us to order.</p>
+        <div class="cta-row reveal-fade">
+          <a href="#order" class="btn magnetic">Order on Instagram <span class="btn-ic"><i class="ph-light ph-arrow-up-right"></i></span></a>
+          <a href="#menu" class="btn btn-ghost-light magnetic">See the menu <span class="btn-ic"><i class="ph-light ph-arrow-down"></i></span></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE (the only one on the page) -->
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span>Homemade / Fresh / Healthy / Affordable / Student friendly /&nbsp;</span>
+    <span>Homemade / Fresh / Healthy / Affordable / Student friendly /&nbsp;</span>
+  </div>
+</div>
+
+<!-- MENU -->
+<section class="menu" id="menu">
+  <div class="wrap">
+    <p class="eyebrow"><span>The menu</span></p>
+    <h2 class="split">What's cooking</h2>
+    <p class="sub reveal-fade">Menu without naan and roti. Tap the plus on a dish to add it to your order.</p>
+
+    <div class="bezel menu-board">
+      <ul class="dishes" id="dishes">
+        <li class="dish" data-dish="Daal Chawal" data-price="3">
+          <div><h3>Daal Chawal</h3></div>
+          <div class="dish-side"><span class="price">£3.00</span><button type="button" class="add" aria-pressed="false" aria-label="Add Daal Chawal to your order"><i class="ph-light ph-plus"></i></button></div>
+        </li>
+        <li class="dish" data-dish="Chana Masala" data-price="4">
+          <div><h3>Chana Masala</h3><p>Chickpeas in spiced gravy</p></div>
+          <div class="dish-side"><span class="price">£4.00</span><button type="button" class="add" aria-pressed="false" aria-label="Add Chana Masala to your order"><i class="ph-light ph-plus"></i></button></div>
+        </li>
+        <li class="dish" data-dish="Mix Vegetable Curry" data-price="4">
+          <div><h3>Mix Vegetable Curry</h3><p>Seasonal vegetables in masala</p></div>
+          <div class="dish-side"><span class="price">£4.00</span><button type="button" class="add" aria-pressed="false" aria-label="Add Mix Vegetable Curry to your order"><i class="ph-light ph-plus"></i></button></div>
+        </li>
+        <li class="dish" data-dish="Egg Fried Rice" data-price="4.5">
+          <div><h3>Egg Fried Rice</h3><p>Fried rice with egg and vegetables</p></div>
+          <div class="dish-side"><span class="price">£4.50</span><button type="button" class="add" aria-pressed="false" aria-label="Add Egg Fried Rice to your order"><i class="ph-light ph-plus"></i></button></div>
+        </li>
+        <li class="dish" data-dish="Chicken Curry" data-price="5">
+          <div><h3>Chicken Curry</h3><p>Classic chicken curry with rice</p></div>
+          <div class="dish-side"><span class="price">£5.00</span><button type="button" class="add" aria-pressed="false" aria-label="Add Chicken Curry to your order"><i class="ph-light ph-plus"></i></button></div>
+        </li>
+        <li class="dish" data-dish="Chicken Biryani" data-price="5">
+          <div><h3>Chicken Biryani</h3><p>Aromatic biryani with chicken</p></div>
+          <div class="dish-side"><span class="price">£5.00</span><button type="button" class="add" aria-pressed="false" aria-label="Add Chicken Biryani to your order"><i class="ph-light ph-plus"></i></button></div>
+        </li>
+        <li class="dish" data-dish="Chicken Pulao" data-price="5">
+          <div><h3>Chicken Pulao</h3><p>Fragrant rice with chicken</p></div>
+          <div class="dish-side"><span class="price">£5.00</span><button type="button" class="add" aria-pressed="false" aria-label="Add Chicken Pulao to your order"><i class="ph-light ph-plus"></i></button></div>
+        </li>
+        <li class="dish" data-dish="Butter Chicken" data-price="5.5">
+          <div><h3>Butter Chicken</h3><p>Creamy and mild chicken curry</p></div>
+          <div class="dish-side"><span class="price">£5.50</span><button type="button" class="add" aria-pressed="false" aria-label="Add Butter Chicken to your order"><i class="ph-light ph-plus"></i></button></div>
+        </li>
+        <li class="dish" data-dish="Beef Pulao" data-price="5.5">
+          <div><h3>Beef Pulao</h3><p>Fragrant rice with beef</p></div>
+          <div class="dish-side"><span class="price">£5.50</span><button type="button" class="add" aria-pressed="false" aria-label="Add Beef Pulao to your order"><i class="ph-light ph-plus"></i></button></div>
+        </li>
+        <li class="dish" data-dish="Keema Aloo (Beef)" data-price="5">
+          <div><h3>Keema Aloo (Beef)</h3><p>Minced beef with potatoes</p></div>
+          <div class="dish-side"><span class="price">£5.00</span><button type="button" class="add" aria-pressed="false" aria-label="Add Keema Aloo to your order"><i class="ph-light ph-plus"></i></button></div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="bezel desserts-bezel">
+      <div class="desserts">
+        <div class="desserts-head">
+          <i class="ph-light ph-cooking-pot"></i>
+          <h3>Desserts</h3>
+          <p class="desserts-price">All £3.00</p>
+        </div>
+        <ul class="dishes dishes-flat">
+          <li class="dish" data-dish="Kheer" data-price="3">
+            <div><h3>Kheer</h3><p>Creamy rice pudding with nuts</p></div>
+            <div class="dish-side"><button type="button" class="add" aria-pressed="false" aria-label="Add Kheer to your order"><i class="ph-light ph-plus"></i></button></div>
+          </li>
+          <li class="dish" data-dish="Gulab Jamun" data-price="3">
+            <div><h3>Gulab Jamun</h3><p>Soft milk dumplings in sugar syrup</p></div>
+            <div class="dish-side"><button type="button" class="add" aria-pressed="false" aria-label="Add Gulab Jamun to your order"><i class="ph-light ph-plus"></i></button></div>
+          </li>
+          <li class="dish" data-dish="Suji Halwa" data-price="3">
+            <div><h3>Suji Halwa</h3><p>Warm semolina pudding with nuts</p></div>
+            <div class="dish-side"><button type="button" class="add" aria-pressed="false" aria-label="Add Suji Halwa to your order"><i class="ph-light ph-plus"></i></button></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <h2 class="split">From our kitchen</h2>
+    <div class="shots">
+      <figure class="shot shot-a">
+        <div class="bezel"><div class="media"><img src="images/biryani.jpg" alt="Chicken biryani in a clay pot" loading="lazy" width="818" height="680"></div></div>
+        <figcaption>Chicken biryani, cooked and served in a clay pot.</figcaption>
+      </figure>
+      <figure class="shot shot-b">
+        <div class="bezel"><div class="media"><img src="images/sandwich.jpg" alt="A loaded sandwich on a long crusty loaf" loading="lazy" width="614" height="668"></div></div>
+        <figcaption>A loaded sandwich on a crusty loaf.</figcaption>
+      </figure>
+      <figure class="shot shot-c">
+        <div class="bezel"><div class="media"><img src="images/lemonade.jpg" alt="Fresh mint lemonade in a cup and a jug" loading="lazy" width="657" height="822"></div></div>
+        <figcaption>Fresh mint lemonade.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div>
+      <p class="eyebrow"><span>Our story</span></p>
+      <h2 class="split">Ghar ka khana means home food.</h2>
+      <p class="about-lead reveal-fade">That is what we cook: biryani, pulao, curries and desserts, made fresh in our home kitchen and priced so students and families can eat well every week.</p>
+      <dl class="counters reveal-fade">
+        <div><dt>Dishes on the menu</dt><dd data-count="13">0</dd></div>
+        <div><dt>Mains, £3 to £5.50</dt><dd data-count="10">0</dd></div>
+        <div><dt>Desserts, all £3</dt><dd data-count="3">0</dd></div>
+      </dl>
+    </div>
+    <ul class="promises">
+      <li><span class="step-ico"><i class="ph-light ph-cooking-pot"></i></span><div><h3>Homemade</h3><p>Cooked at home, the way it is meant to be.</p></div></li>
+      <li><span class="step-ico"><i class="ph-light ph-shield-check"></i></span><div><h3>Hygienic</h3><p>Cleanliness comes first in our kitchen.</p></div></li>
+      <li><span class="step-ico"><i class="ph-light ph-wallet"></i></span><div><h3>Affordable</h3><p>Meals from £3, and every dessert is £3.</p></div></li>
+      <li><span class="step-ico"><i class="ph-light ph-graduation-cap"></i></span><div><h3>Student friendly</h3><p>Good food that fits a student budget.</p></div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- HOW -->
+<section class="how" id="how">
+  <div class="wrap how-grid">
+    <div class="how-head">
+      <p class="eyebrow"><span>How it works</span></p>
+      <h2 class="split">Ordering is a conversation</h2>
+      <p class="reveal-fade">No cart and no checkout. Pick your dishes and message us.</p>
+    </div>
+    <ol class="steps" id="steps">
+      <li class="step"><span class="step-ico"><i class="ph-light ph-chat-circle-text"></i></span><div><h3>Message</h3><p>Send us a DM on Instagram with the dishes you want.</p></div></li>
+      <li class="step"><span class="step-ico"><i class="ph-light ph-check-circle"></i></span><div><h3>Confirm</h3><p>We reply with availability and timing.</p></div></li>
+      <li class="step"><span class="step-ico"><i class="ph-light ph-cooking-pot"></i></span><div><h3>Cook</h3><p>Your order is cooked fresh in our kitchen.</p></div></li>
+      <li class="step"><span class="step-ico"><i class="ph-light ph-package"></i></span><div><h3>Collect</h3><p>Arrange pick-up or delivery with us and enjoy.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ORDER -->
+<section class="order" id="order">
+  <div class="wrap order-grid">
+    <div>
+      <p class="eyebrow"><span>Place an order</span></p>
+      <h2 class="split">Tell us what you fancy.</h2>
+      <p class="reveal-fade">Choose your dishes and we will open Instagram with your order ready to paste. Prices and availability are confirmed in chat.</p>
+      <a class="btn btn-ghost magnetic reveal-fade" href="https://www.instagram.com/tiffin_gloucester/" target="_blank" rel="noopener">Read our reviews <span class="btn-ic"><i class="ph-light ph-instagram-logo"></i></span></a>
+    </div>
+    <div class="bezel reveal-fade">
+    <form class="form" id="orderForm" novalidate>
+      <div class="field">
+        <label for="name">Your name</label>
+        <input id="name" name="name" autocomplete="given-name" aria-describedby="nameErr">
+        <p class="err" id="nameErr" role="alert"></p>
+      </div>
+      <fieldset class="field">
+        <legend>Your dishes</legend>
+        <div class="pills" id="pills"></div>
+        <p class="help" id="total">Nothing selected yet.</p>
+        <p class="err" id="itemsErr" role="alert"></p>
+      </fieldset>
+      <div class="field">
+        <label for="note">Anything else?</label>
+        <textarea id="note" name="note" rows="3"></textarea>
+        <p class="help">Quantity, date needed, allergies. Optional, but it helps us plan.</p>
+      </div>
+      <button class="btn" type="submit">Order on Instagram <span class="btn-ic"><i class="ph-light ph-arrow-up-right"></i></span></button>
+      <p class="status" id="status" role="status"></p>
+    </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap foot-grid">
+    <div><h3>Ghar Ka Khana</h3><p>Homemade Pakistani food.<br>Gloucester, UK</p></div>
+    <div><h4>Explore</h4><a href="#menu">Menu</a><a href="#gallery">Kitchen</a><a href="#about">Our story</a><a href="#order">Order</a></div>
+    <div><h4>Contact</h4><a href="https://www.instagram.com/tiffin_gloucester/" target="_blank" rel="noopener">@tiffin_gloucester</a><a href="https://ig.me/m/tiffin_gloucester" target="_blank" rel="noopener">Send a DM</a></div>
+  </div>
+  <p class="copy">&copy; <span id="yr"></span> Ghar Ka Khana. All rights reserved.</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

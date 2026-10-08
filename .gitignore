@@ -1,0 +1,15 @@
+# Raw reference files, not used by the site (third-party ad and customer stories included)
+/menu.png
+/menu2.png
+/menu3.png
+/menu4.jpg
+/menu6.png
+/menu7.png
+/menu8.png
+# Duplicate of video/hero.mp4
+/Website_hero_video_with_food_*.mp4
+node_modules/
+.DS_Store
+_shot.*
+_t.html
+_frame.html
